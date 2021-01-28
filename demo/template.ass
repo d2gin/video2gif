@@ -23,7 +23,7 @@ Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.30,0:00:03.50,Default,,0,0,0,,{\fs72\fn微软雅黑}<?=[0]=?>
-Dialogue: 0,0:00:05.00,0:00:06.50,Default,,0,0,0,,{\fs72\fn微软雅黑}<?=[1]=?>
-Dialogue: 0,0:00:07.00,0:00:09.10,Default,,0,0,0,,{\fs72\fn微软雅黑}<?=[2]=?>
-Dialogue: 0,0:00:09.50,0:00:13.00,Default,,0,0,0,,{\fs72\fn微软雅黑}<?=[3]=?>
+Dialogue: 0,0:00:00.30,0:00:03.50,Default,,0,0,0,,{\fs72\fn微软雅黑}我是字幕1
+Dialogue: 0,0:00:05.00,0:00:06.50,Default,,0,0,0,,{\fs72\fn微软雅黑}我是字幕2
+Dialogue: 0,0:00:07.00,0:00:09.10,Default,,0,0,0,,{\fs72\fn微软雅黑}我是字幕3
+Dialogue: 0,0:00:09.50,0:00:13.00,Default,,0,0,0,,{\fs72\fn微软雅黑}我是字幕4
