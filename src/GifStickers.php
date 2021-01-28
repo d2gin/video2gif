@@ -10,6 +10,17 @@ class GifStickers
 {
     public static $instance = null;
     protected     $error    = '';
+    protected     $FFMpeg   = null;
+
+    public function __construct($option = [])
+    {
+        $option       = array_merge([
+            // 如果是win环境请务必添加ffmpeg的环境路径
+            'ffmpeg.binaries'  => @$option['ffmpeg.binaries'] ?: 'ffmpeg',
+            'ffprobe.binaries' => @$option['ffprobe.binaries'] ?: 'ffprobe',
+        ], $option);
+        $this->FFMpeg = \FFMpeg\FFMpeg::create($option);
+    }
 
     public static function instance($options = [])
     {
@@ -19,11 +30,17 @@ class GifStickers
         return self::$instance;
     }
 
-
+    /**
+     * @param $i 视频文件
+     * @param $ass 字幕文件
+     * @param $o 输出的文件名
+     * @param array $d 图片尺寸 win 无效果 linux 有效果
+     * @return bool
+     */
     public function generate($i, $ass, $o, $d = [200, 1])
     {
         // 打开视频模版
-        $video = ffmpeg()->open($i);
+        $video = $this->FFMpeg->open($i);
         // 创建像素 不知道为什么不起作用 win无效果 linux有效果
         if (is_numeric($d)) {
             $d = [$d, 1];
