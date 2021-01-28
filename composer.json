@@ -1,6 +1,5 @@
 {
     "name": "icy8/video2gif",
-    "description": "视频转gif动图",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
