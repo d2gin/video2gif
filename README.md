@@ -15,7 +15,7 @@
 
 ### 食用方法
 
-必须安装好ffmpeg
+必须安装好ffmpeg，素材和例子都在demo文件夹
 
 ```php
 <?php
